@@ -86,12 +86,10 @@ $$u = \sum_{j=1}^{n} \frac{t_{Emax,j}}{\min(t_{Dmax,j}, t_{Pmin,j})} \leq Anzahl
 [[Beispielrechnung Hinreichender Schedulingtest (EDF)]]
 ### Notwendiger Schedulingtest
 
-1. aufstellen der Formel 
-2. Bestimmung der $I$ 
-	1. Bestimmung der Maximalen Berechnungszeit$$ x = 0 < I < kgV(t_{Dmax(1)},t_{Dmax(2)},...t_{Dmax(n)}) + max(t_{Dmin(1)},t_{Dmin(2)},...t_{Dmin(n)})$$
-	2. Bestimmen der einzelnen $I$ für jede Task $$ \begin{aligned} & \{k\cdot t_{Dmax}∣k∈Z,0<k\cdot t_{Dmax}<x\} \\ & = \{I_{1},I_{2},I_{3},I_{4},I_{5},...,I_{n} \} \end{aligned} $$
-	3. Für jedes $I$ $$t_{C,ges}(I) = \sum \left\lfloor \frac{I + t_{Pmin,i} - t_{Dmax,i} - t_{Ph,i}}{t_{Pmin,i}} \right\rfloor \cdot t_{Emax,i}$$
-	   Wenn:   $t_{C,ges}(I)< I$   für alle $I$ ist die notwendige Bedingung erfüllt
+1. Bestimmung der Maximalen Berechnungszeit$$ x = 0 < I < kgV(t_{Dmax(1)},t_{Dmax(2)},...t_{Dmax(n)}) + max(t_{Dmin(1)},t_{Dmin(2)},...t_{Dmin(n)})$$
+2. Bestimmen der einzelnen $I$ für jede Task $$ \begin{aligned} & \{k\cdot t_{Dmax}∣k∈Z,0<k\cdot t_{Dmax}<x\} \\ & = \{I_{1},I_{2},I_{3},I_{4},I_{5},...,I_{n} \} \end{aligned} $$
+3. Für jedes $I$ $$t_{C,ges}(I) = \sum \left\lfloor \frac{I + t_{Pmin,i} - t_{Dmax,i} - t_{Ph,i}}{t_{Pmin,i}} \right\rfloor \cdot t_{Emax,i}$$
+   Wenn:   $t_{C,ges}(I)< I$   für alle $I$ ist die notwendige Bedingung erfüllt
 
 [[Beispielrechnung Notwendiger Schedulingtest (EDF)]]
 
