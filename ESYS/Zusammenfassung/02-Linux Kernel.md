@@ -62,18 +62,18 @@
 ## Kernel Sourcen
 **Kernel Management**
 
-Prozessmanagement
+**Prozessmanagement**
 - Create/Destroy Prozesse
 - Single core Scheduling
 - Multi Core Scheduling
 
-Speichermanagement
+**Speichermanagement**
 - Adressumsetzung
 - Speicherschutz
 - Swap-Space
 - Extended Memory
 
-Device Drivers
+**Device Drivers**
 - Standardisierter zugriff auf Hardware
 - Peripherie via spezifizierter Gerätetreiber
 - Kernel-Komponenten haben Kernel Space zugriff
@@ -92,16 +92,16 @@ Device Drivers
 ## Kernel Config
 
 - Der kernel wird über eine Makefile mit >2000 parameter gebaut
-	- über die Shell var ARCH=\<Architektur> lässt sich die benötigte Prozessorarchitektur einstellen
+	- über die Shell var `ARCH=\<Architektur>` lässt sich die benötigte Prozessorarchitektur einstellen
 	- alle config parameter des Kernels werden in der .config file gespeichert
-	- über zcat /proc/config.gz kann die config auch in einem laufenden System abgefragt werden 
+	- über `zcat /proc/config.gz` kann die config auch in einem laufenden System abgefragt werden 
 
-	- **"make allnoconfig"** baut die minimal notwendige config, damit der Kernel kompiliert.
+	- `make allnoconfig` baut die minimal notwendige config, damit der Kernel kompiliert.
 	- **⚠️ Dies erzeugt keinen Bootfähigen Kernel ⚠️**
-	- **make mrproper** oder **make distclean** entfernt alle durch make erzeugten dateien AUCH die .config
+	- `make mrproper` oder `make distclean` entfernt alle durch make erzeugten dateien AUCH die .config
 
 	**Linux Module**
-	- mit **insmod** und **rmmod** können module wie ein Treiber in den Kernel geladen und wieder entfernt werden
+	- mit `insmod` und `rmmod` können module wie ein Treiber in den Kernel geladen und wieder entfernt werden
 	- Alternativ können die Treiber auch direkt in den Kernel kompiliert werden (keine Infrastruktur zum laden/entladen von modulen nötig)
 	
 ## Kernel Build 
@@ -136,9 +136,9 @@ Device Drivers
 - Aufsetzen der Page Tables für die Speicherverwaltung
 - Initialisieren und Aktivierung der MMU
 - Aufsetzen eines einfachen Error Handlings
-- Sprung zur **start_kernel()** Funktion in `main.o` des Kernels
+- Sprung zur `start_kernel()` Funktion in `main.o` des Kernels
 	
-- die **start_kernel()** funktion hat die aufgabe:
+- die `start_kernel()` funktion hat die aufgabe:
 	- Architektur Setup (setup_arch())
 	- Verarbeitung der Kernel Command Line
 	- Initialisierung der Subsysteme

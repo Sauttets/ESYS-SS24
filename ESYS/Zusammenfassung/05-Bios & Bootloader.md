@@ -31,7 +31,7 @@
 	- Sekundärspeicher 
 	- Netzwerk (z.B. tftp)
 - Startet den Kernel mit den nötigen Parametern
-- Übergibt die Kontrolle des systems an den Kernel (aufruf von `kmain()`
+- Übergibt die Kontrolle des systems an den Kernel (aufruf von `kmain()`)
 
 ### Bootloader Stages
 

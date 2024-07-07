@@ -19,7 +19,7 @@
 - Exakte anpassung an Systemanforderungen
 - keine überflüssigen Funktionen um overhead zu vermeiden
 - auf die Gerätefunktion angepasste Hardwareplattformen
-	- Cross-Compile-Toolchain 
+	- Cross-Compile-[[06-1-Toolchain|Toolchain]] 
 	- Systemgeneratoren 
 	- Simulator/Emulator
 	
@@ -31,7 +31,7 @@ Deeply embedded Systeme laufen im vergleich zu Open Embedded Systemen ohne ein v
 
 **Softwarekomponenten eines Embedded Linux Systems:** 
 - Firmware (Bios) 
-- Bootloader (Linux-) 
+- [[05-Bios & Bootloader|Bootloader]] 
 - [[02-Linux Kernel|Kernel]] 
 - [[04-1-RootFS|Rootfilesystem]]
 
